@@ -5,7 +5,6 @@ n8n is a self-hosted workflow automation tool. Build automations visually, conne
 ## Documentation
 
 - [n8n documentation](https://docs.n8n.io/) — the upstream guide to building workflows, nodes, and credentials.
-- [Workflow templates](https://n8n.io/workflows/) — ready-made workflows you can import and adapt.
 
 ## What you get on StartOS
 
