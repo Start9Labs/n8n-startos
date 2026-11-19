@@ -35,7 +35,7 @@
 
 ## Image and Container Runtime
 
-One upstream image, built through the root `Dockerfile`: a temporary layer that replaces its CA store with a fixed Alpine bundle and sets `NODE_OPTIONS=--use-openssl-ca`, and replaces its Node.js with the official 26.13.1 build (plus the `libatomic` it links), which carries the November 2026 Node.js security fixes. Both come out once upstream ships an image with a fixed store and Node.
+One upstream image, built through the root `Dockerfile`: a temporary layer that replaces its CA store with a fixed Alpine bundle and sets `NODE_OPTIONS=--use-openssl-ca`, and replaces its Node.js with a source build of 26.13.1 (plus the `libatomic` it links), carrying the November 2026 Node.js security fixes and n8n's V8 crash fix. The Node source, V8 patch, and upstream regression check are checksum-pinned in the Dockerfile. The check runs during compilation and against the final image's Node; pointer compression stays disabled to match upstream's standard native addons. Both layers come out once upstream ships an image with a fixed store and a Node runtime retaining both sets of fixes.
 
 | Property      | Value                      |
 | ------------- | -------------------------- |
